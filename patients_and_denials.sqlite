@@ -1,4 +1,4 @@
---Join patient name table and denial table together (for denials only) using patient ID
+--Join patient name table and denial table together using patient id. This will only add patients who got denied.
 
 SELECT  names.patient_id, names.patient_risk, denials.denial_yn, denials.denial_code
 FROM names
