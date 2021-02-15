@@ -1,0 +1,7 @@
+--Join patient name table and denial table together (for denials only) using patient ID
+
+SELECT  names.patient_id, names.patient_risk, denials.denial_yn, denials.denial_code
+FROM names
+JOIN denials
+  ON names.patient_id = denials.patient_id
+WHERE denial_yn = ‘Y’;
